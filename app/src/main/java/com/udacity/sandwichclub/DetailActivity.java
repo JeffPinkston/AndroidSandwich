@@ -81,7 +81,7 @@ public class DetailActivity extends AppCompatActivity {
     private void populateUI(Sandwich sandwich) {
         mMainName.setText(sandwich.getMainName());
 
-        if(sandwich.getPlaceOfOrigin() != null && !sandwich.getPlaceOfOrigin().equals("")) {
+        if(sandwich.getPlaceOfOrigin() != null) {
             mOrigin.setText(sandwich.getPlaceOfOrigin());
         } else {
             hideOrigin();
@@ -99,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
             hideAKA();
         }
 
-        if(sandwich.getDescription() != null && sandwich.getDescription() != "") {
+        if(sandwich.getDescription() != null) {
             mDescription.setText(sandwich.getDescription());
         } else {
             hideDescription();
